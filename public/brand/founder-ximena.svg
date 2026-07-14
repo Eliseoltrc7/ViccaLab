@@ -1,0 +1,13 @@
+<svg width="800" height="1000" viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gx" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#585fa8"/>
+      <stop offset="100%" stop-color="#b2a0cd"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#gx)"/>
+  <circle cx="620" cy="150" r="220" fill="#dddf4b" opacity="0.18"/>
+  <circle cx="120" cy="880" r="260" fill="#f5f2ed" opacity="0.12"/>
+  <circle cx="400" cy="430" r="190" fill="#f5f2ed" opacity="0.14"/>
+  <text x="400" y="470" text-anchor="middle" font-family="Georgia, 'Playfair Display', serif" font-size="150" fill="#f5f2ed">XC</text>
+</svg>
