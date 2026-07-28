@@ -1,38 +1,40 @@
 export type Testimonial = {
   id: string;
-  name: string;
   role: string;
   quote: string;
 };
 
-// Contenido de ejemplo — reemplazar con testimonios reales de clientes.
+// Contenido de ejemplo (tono genérico, sin cita textual real) — reemplazar
+// con las frases reales de cada cliente cuando estén disponibles.
 export const testimonials: Testimonial[] = [
   {
-    id: "t1",
-    name: "Marina Gómez",
-    role: "Fundadora, Aurora Cosmética",
+    id: "suplementos-yerba-buena",
+    role: "Dueño, Suplementos Yerba Buena",
     quote:
-      "ViccaLab entendió nuestra marca desde el primer día. Los resultados en ventas superaron lo que esperábamos y el acompañamiento fue constante.",
+      "Desde que trabajamos con ViccaLab, nuestras redes y la tienda online se sienten mucho más profesionales. El acompañamiento es constante y eso se nota.",
   },
   {
-    id: "t2",
-    name: "Fernando Ruiz",
-    role: "Director, Norte Estudio de Arquitectura",
+    id: "ena-store",
+    role: "Dueño, ENA Store",
     quote:
-      "El nuevo sitio y la identidad visual nos posicionaron como un estudio de otro nivel. Se nota el criterio profesional en cada detalle.",
+      "El contenido y la publicidad digital nos ayudaron a llegar a más clientes sin perder la esencia de la marca. Muy conformes con el trabajo del equipo.",
   },
   {
-    id: "t3",
-    name: "Lucía Fernández",
-    role: "Dueña, Sabor Nativo",
+    id: "santex",
+    role: "Dueño, Santex",
     quote:
-      "Nuestras redes pasaron de estar abandonadas a ser una herramienta real de ventas. El equipo es creativo, prolijo y muy comprometido.",
+      "Necesitábamos ordenar nuestra presencia digital y ViccaLab lo resolvió con un trabajo prolijo y una comunicación clara en todo momento.",
   },
   {
-    id: "t4",
-    name: "Tomás Ibarra",
-    role: "Co-fundador, Fit Lab Indumentaria",
+    id: "tucu-mascotas",
+    role: "Dueño, Tucu Mascotas",
     quote:
-      "Lanzamos la tienda online y en el primer mes ya teníamos ventas rentables. La comunicación con el equipo de ViccaLab es excelente.",
+      "Coordinar la comunicación de varias sucursales no es fácil, pero el equipo lo maneja con mucho criterio y siempre proponen ideas nuevas.",
+  },
+  {
+    id: "energy-gym-fitness",
+    role: "Dueño, Energy Gym y Fitness",
+    quote:
+      "Nuestras redes ganaron otro nivel de constancia y calidad. Se nota el compromiso del equipo con cada contenido que suben.",
   },
 ];

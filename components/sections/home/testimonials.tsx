@@ -44,9 +44,8 @@ export function Testimonials() {
                   &ldquo;{current.quote}&rdquo;
                 </p>
                 <p className="mt-6 text-sm font-medium text-brand-charcoal">
-                  {current.name}
+                  {current.role}
                 </p>
-                <p className="text-sm text-brand-charcoal/55">{current.role}</p>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -56,7 +55,7 @@ export function Testimonials() {
               <button
                 key={t.id}
                 type="button"
-                aria-label={`Ver testimonio de ${t.name}`}
+                aria-label={`Ver testimonio de ${t.role}`}
                 onClick={() => setIndex(i)}
                 className={`h-2 rounded-full transition-all duration-300 ${
                   i === index ? "w-8 bg-brand-primary" : "w-2 bg-brand-charcoal/15"
