@@ -9,77 +9,9 @@ export type CaseStudy = {
   logo?: string;
 };
 
-// Los primeros 4 son contenido de ejemplo — reemplazar con casos reales y capturas del cliente.
-// "suplementos-yerba-buena" es un caso real (@suplementosybtuc).
+// Todos los casos son clientes reales de ViccaLab. Las métricas usan solo datos
+// públicos (seguidores y datos que las propias marcas comunican en su perfil).
 export const caseStudies: CaseStudy[] = [
-  {
-    id: "aurora-cosmetica",
-    client: "Aurora Cosmética",
-    category: "E-commerce · Belleza",
-    objective:
-      "Escalar las ventas online durante el lanzamiento de una nueva línea de productos.",
-    results: [
-      "Campaña de Meta Ads con segmentación por intereses y remarketing",
-      "Rediseño de tienda online con checkout optimizado",
-      "Producción de contenido de producto y UGC",
-    ],
-    metrics: [
-      { label: "ROAS", value: "5.4x" },
-      { label: "Alcance", value: "480K" },
-      { label: "Compras", value: "+312%" },
-    ],
-  },
-  {
-    id: "nortestudio-arquitectura",
-    client: "Norte Estudio de Arquitectura",
-    category: "Branding · Sitio Corporativo",
-    objective:
-      "Construir una identidad visual premium y un sitio web que refleje la calidad de sus proyectos.",
-    results: [
-      "Rediseño completo de marca e identidad visual",
-      "Desarrollo de sitio corporativo con portfolio interactivo",
-      "Estrategia de contenido para LinkedIn e Instagram",
-    ],
-    metrics: [
-      { label: "Leads calificados", value: "+180%" },
-      { label: "Tiempo en sitio", value: "+3.2min" },
-      { label: "Proyectos cerrados", value: "+8" },
-    ],
-  },
-  {
-    id: "sabor-nativo",
-    client: "Sabor Nativo",
-    category: "Redes Sociales · Publicidad",
-    objective:
-      "Posicionar una cadena gastronómica local y aumentar las reservas mediante redes sociales.",
-    results: [
-      "Gestión integral de redes con contenido diario",
-      "Campañas de publicidad geolocalizadas",
-      "Cobertura audiovisual de eventos y lanzamientos de menú",
-    ],
-    metrics: [
-      { label: "Seguidores", value: "+65%" },
-      { label: "Reservas", value: "+240%" },
-      { label: "Alcance mensual", value: "310K" },
-    ],
-  },
-  {
-    id: "fit-lab-indumentaria",
-    client: "Fit Lab Indumentaria",
-    category: "Marketing Digital · E-commerce",
-    objective:
-      "Lanzar una tienda online de indumentaria deportiva y generar ventas desde el primer mes.",
-    results: [
-      "Configuración completa de Tienda Nube con Mercado Pago",
-      "Embudo de conversión con Meta Ads y Google Ads",
-      "Estrategia de email marketing de recuperación de carritos",
-    ],
-    metrics: [
-      { label: "ROAS", value: "4.8x" },
-      { label: "Ventas primer mes", value: "+520" },
-      { label: "CAC", value: "-38%" },
-    ],
-  },
   {
     id: "suplementos-yerba-buena",
     client: "Suplementos Yerba Buena",
@@ -98,5 +30,77 @@ export const caseStudies: CaseStudy[] = [
     ],
     link: "https://www.instagram.com/suplementosybtuc/",
     logo: "/brand/clients/suplementos-yerba-buena.png",
+  },
+  {
+    id: "ena-store",
+    client: "ENA Store",
+    category: "Redes Sociales · E-commerce",
+    objective:
+      "Potenciar la presencia digital de una tienda de tecnología y acompañar el crecimiento de sus ventas de iPhones.",
+    results: [
+      "Gestión y optimización del perfil de Instagram",
+      "Producción constante de contenido de producto",
+      "Estrategia de publicidad digital para captar nuevos clientes",
+    ],
+    metrics: [
+      { label: "Seguidores", value: "96.3K" },
+      { label: "Ventas", value: "+5000" },
+      { label: "Trayectoria", value: "+6 años" },
+    ],
+    link: "https://www.instagram.com/ena.storetuc/",
+  },
+  {
+    id: "santex",
+    client: "Santex",
+    category: "Redes Sociales · Seguridad e Industria",
+    objective:
+      "Dar visibilidad digital a una empresa de soluciones de seguridad y agro, conectando su catálogo con nuevos clientes.",
+    results: [
+      "Gestión de redes sociales y creación de contenido",
+      "Comunicación clara de las líneas de producto (EPP y Agro)",
+      "Estrategia digital para fortalecer la marca en el rubro",
+    ],
+    metrics: [
+      { label: "Seguidores", value: "1.6K" },
+      { label: "Rubros", value: "EPP y Agro" },
+      { label: "Presencia", value: "Digital" },
+    ],
+    link: "https://www.instagram.com/santex.sa/",
+  },
+  {
+    id: "tucu-mascotas",
+    client: "Tucu Mascotas",
+    category: "Redes Sociales · Salud Animal",
+    objective:
+      "Acompañar la comunicación digital de una clínica veterinaria con varias sucursales y distintos servicios para mascotas.",
+    results: [
+      "Gestión integral de redes sociales",
+      "Contenido para promociones, farmacia y peluquería",
+      "Comunicación diferenciada por sucursal",
+    ],
+    metrics: [
+      { label: "Seguidores", value: "12.3K" },
+      { label: "Sucursales", value: "3" },
+      { label: "Servicios", value: "Multi-rubro" },
+    ],
+    link: "https://www.instagram.com/tucumascotasok/",
+  },
+  {
+    id: "energy-gym-fitness",
+    client: "Energy Gym y Fitness",
+    category: "Redes Sociales · Fitness",
+    objective:
+      "Fortalecer la comunidad digital de un gimnasio y comunicar sus clases y horarios de forma constante.",
+    results: [
+      "Gestión de redes sociales con contenido regular",
+      "Difusión de clases, horarios y eventos especiales",
+      "Construcción de comunidad e identidad de marca",
+    ],
+    metrics: [
+      { label: "Seguidores", value: "8.4K" },
+      { label: "Clases", value: "Acrofit y más" },
+      { label: "Horario", value: "Extendido" },
+    ],
+    link: "https://www.instagram.com/energyfit_tuc/",
   },
 ];
