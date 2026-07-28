@@ -29,7 +29,6 @@ export const caseStudies: CaseStudy[] = [
       { label: "Canal", value: "Tienda Nube" },
     ],
     link: "https://www.instagram.com/suplementosybtuc/",
-    logo: "/brand/clients/suplementos-yerba-buena.png",
   },
   {
     id: "ena-store",
