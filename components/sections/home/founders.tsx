@@ -17,12 +17,12 @@ export function Founders() {
         {team.map((member, index) => (
           <Reveal key={member.id} delay={index * 0.1}>
             <div className="group overflow-hidden rounded-3xl border border-brand-charcoal/8 bg-white transition-shadow duration-300 hover:shadow-[0_30px_60px_-25px_rgba(45,46,40,0.2)]">
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div className="relative aspect-[3/4] overflow-hidden">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
               </div>

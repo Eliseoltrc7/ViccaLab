@@ -5,9 +5,12 @@ export type CaseStudy = {
   objective: string;
   results: string[];
   metrics: { label: string; value: string }[];
+  link?: string;
+  logo?: string;
 };
 
-// Contenido de ejemplo — reemplazar con casos reales y capturas del cliente.
+// Los primeros 4 son contenido de ejemplo — reemplazar con casos reales y capturas del cliente.
+// "suplementos-yerba-buena" es un caso real (@suplementosybtuc).
 export const caseStudies: CaseStudy[] = [
   {
     id: "aurora-cosmetica",
@@ -76,5 +79,24 @@ export const caseStudies: CaseStudy[] = [
       { label: "Ventas primer mes", value: "+520" },
       { label: "CAC", value: "-38%" },
     ],
+  },
+  {
+    id: "suplementos-yerba-buena",
+    client: "Suplementos Yerba Buena",
+    category: "Redes Sociales · E-commerce",
+    objective:
+      "Profesionalizar el perfil de Instagram de una tienda de suplementos y convertir seguidores en clientes con una tienda online propia.",
+    results: [
+      "Optimización integral del perfil y creación de contenido constante",
+      "Configuración de tienda online en Tienda Nube con envíos a todo el país",
+      "Campañas de Meta Ads enfocadas en captación de nuevos seguidores",
+    ],
+    metrics: [
+      { label: "Seguidores", value: "35.1K" },
+      { label: "Envíos", value: "Todo el país" },
+      { label: "Canal", value: "Tienda Nube" },
+    ],
+    link: "https://www.instagram.com/suplementosybtuc/",
+    logo: "/brand/clients/suplementos-yerba-buena.png",
   },
 ];

@@ -1,9 +1,11 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Reveal } from "@/components/shared/reveal";
+import { InstagramIcon } from "@/components/shared/social-icons";
 import { caseStudies } from "@/lib/data/case-studies";
 
 export function CaseStudies() {
@@ -52,9 +54,32 @@ export function CaseStudies() {
           {caseStudies.map((study, index) => (
             <Reveal key={study.id} delay={index * 0.05} className="snap-start">
               <article className="flex h-full w-[85vw] max-w-md flex-col rounded-3xl border border-brand-charcoal/8 bg-white p-8 sm:w-[420px]">
-                <span className="text-xs font-medium uppercase tracking-[0.14em] text-brand-primary">
-                  {study.category}
-                </span>
+                <div className="flex items-start justify-between gap-3">
+                  <span className="text-xs font-medium uppercase tracking-[0.14em] text-brand-primary">
+                    {study.category}
+                  </span>
+                  {study.link && (
+                    <a
+                      href={study.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Ver Instagram de ${study.client}`}
+                      className="group/logo flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-brand-cream text-brand-charcoal/60 ring-1 ring-brand-charcoal/8 transition-colors hover:bg-brand-primary hover:text-white"
+                    >
+                      {study.logo ? (
+                        <Image
+                          src={study.logo}
+                          alt={`Logo de ${study.client}`}
+                          width={40}
+                          height={40}
+                          className="h-full w-full object-contain p-1.5 transition-transform duration-300 group-hover/logo:scale-110"
+                        />
+                      ) : (
+                        <InstagramIcon className="h-4 w-4" />
+                      )}
+                    </a>
+                  )}
+                </div>
                 <h3 className="mt-3 font-display text-2xl font-medium text-brand-charcoal">
                   {study.client}
                 </h3>

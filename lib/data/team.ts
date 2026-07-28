@@ -20,7 +20,7 @@ export const team: TeamMember[] = [
       "Producción audiovisual",
       "Creatividad",
     ],
-    image: "/brand/founder-ximena.svg",
+    image: "/team/ximena-castellano.png",
   },
   {
     id: "victoria-felipe",
@@ -34,6 +34,6 @@ export const team: TeamMember[] = [
       "Ventas",
       "Branding",
     ],
-    image: "/brand/founder-victoria.svg",
+    image: "/team/victoria-felipe.jpg",
   },
 ];
