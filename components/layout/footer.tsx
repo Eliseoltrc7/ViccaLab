@@ -19,9 +19,9 @@ export function Footer() {
           <Image
             src="/brand/viccalab-logo.png"
             alt="ViccaLab"
-            width={160}
-            height={44}
-            className="h-9 w-auto brightness-0 invert"
+            width={200}
+            height={55}
+            className="h-12 w-auto brightness-0 invert"
           />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-brand-cream/60">
             {SITE_DESCRIPTION}

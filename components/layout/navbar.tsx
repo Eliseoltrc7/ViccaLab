@@ -35,11 +35,11 @@ export function Navbar() {
           <Image
             src="/brand/viccalab-logo.png"
             alt="ViccaLab"
-            width={140}
-            height={40}
+            width={180}
+            height={52}
             priority
             className={cn(
-              "h-8 w-auto transition-all duration-500",
+              "h-11 w-auto transition-all duration-500",
               !solid && "brightness-0 invert"
             )}
           />
