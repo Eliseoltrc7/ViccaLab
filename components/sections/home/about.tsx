@@ -90,6 +90,22 @@ export function About() {
           ))}
         </RevealGroup>
       </div>
+
+      <Reveal delay={0.1} className="mt-8">
+        <div className="relative overflow-hidden rounded-4xl">
+          <Image
+            src="/team/equipo-trabajando.jpg"
+            alt="Ximena y Victoria trabajando en el diseño de marca de ViccaLab"
+            width={1600}
+            height={900}
+            className="h-[340px] w-full object-cover object-[50%_38%] md:h-[440px]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+          <p className="absolute bottom-6 left-6 font-display text-lg text-white md:text-xl">
+            Así trabajamos, todos los días.
+          </p>
+        </div>
+      </Reveal>
     </section>
   );
 }
