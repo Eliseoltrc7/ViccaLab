@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Reveal } from "@/components/shared/reveal";
-import { FlowerBurst } from "@/components/shared/decorative-shapes";
+import { StarImage } from "@/components/shared/decorative-shapes";
 import { historyMilestones } from "@/lib/data/history-milestones";
 
 if (typeof window !== "undefined") {
@@ -43,8 +43,17 @@ export function HistoryTimeline() {
       ref={sectionRef}
       className="relative overflow-hidden bg-brand-charcoal py-24 text-brand-cream md:py-32"
     >
-      <FlowerBurst className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 text-brand-lime/10 md:h-80 md:w-80" />
-      <FlowerBurst className="pointer-events-none absolute -bottom-20 -left-16 h-56 w-56 text-brand-lavender/10 md:h-72 md:w-72" />
+      <StarImage
+        variant="lime"
+        rotate={10}
+        className="pointer-events-none absolute -right-12 -top-14 w-52 opacity-80 md:w-64"
+      />
+      <StarImage
+        variant="lavender"
+        flip
+        rotate={-12}
+        className="pointer-events-none absolute -bottom-16 -left-12 w-48 opacity-70 md:w-56"
+      />
       <div className="container-page relative">
         <SectionHeading
           eyebrow="Nuestra historia"

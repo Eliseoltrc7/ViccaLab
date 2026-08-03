@@ -1,4 +1,4 @@
-import { AsteriskShape, FlowerBurst } from "@/components/shared/decorative-shapes";
+import { AsteriskShape, StarImage } from "@/components/shared/decorative-shapes";
 import { StickerBadge } from "@/components/shared/sticker-badge";
 
 export function ContactHero() {
@@ -7,7 +7,11 @@ export function ContactHero() {
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -right-16 top-6 h-72 w-72 rounded-full bg-brand-lavender/25 blur-3xl" />
         <div className="absolute -bottom-24 -left-10 h-96 w-96 rounded-full bg-brand-lime/15 blur-3xl" />
-        <FlowerBurst className="absolute -left-16 -top-16 h-60 w-60 text-white/10 md:h-72 md:w-72" />
+        <StarImage
+          variant="lime"
+          rotate={14}
+          className="absolute -left-14 -top-14 w-52 opacity-90 md:w-64"
+        />
         <AsteriskShape className="absolute left-[10%] top-[24%] h-8 w-8 text-brand-lime/70" />
       </div>
 

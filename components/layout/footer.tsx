@@ -16,7 +16,7 @@ export function Footer() {
     <footer className="border-t border-brand-charcoal/10 bg-brand-charcoal text-brand-cream">
       <div className="container-page grid gap-12 py-16 md:grid-cols-4 md:gap-8 md:py-24">
         <div className="md:col-span-2">
-          <Logo className="text-3xl" light />
+          <Logo className="h-11" light />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-brand-cream/60">
             {SITE_DESCRIPTION}
           </p>

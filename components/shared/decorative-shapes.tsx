@@ -1,4 +1,39 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils";
+
+const starVariants = {
+  lavender: { src: "/brand/shapes/star-lavender.png", width: 708, height: 666 },
+  lime: { src: "/brand/shapes/star-lime.png", width: 717, height: 846 },
+} as const;
+
+type StarImageProps = {
+  className?: string;
+  variant?: keyof typeof starVariants;
+  flip?: boolean;
+  rotate?: number;
+};
+
+export function StarImage({
+  className,
+  variant = "lavender",
+  flip = false,
+  rotate = 0,
+}: StarImageProps) {
+  const { src, width, height } = starVariants[variant];
+  return (
+    <Image
+      src={src}
+      alt=""
+      width={width}
+      height={height}
+      className={cn("h-auto w-full select-none", className)}
+      style={{
+        transform: `${flip ? "scaleX(-1) " : ""}${rotate ? `rotate(${rotate}deg)` : ""}`,
+      }}
+      aria-hidden
+    />
+  );
+}
 
 export function AsteriskShape({ className }: { className?: string }) {
   return (
@@ -14,33 +49,6 @@ export function AsteriskShape({ className }: { className?: string }) {
         strokeWidth="9"
         strokeLinecap="round"
       />
-    </svg>
-  );
-}
-
-type FlowerBurstProps = {
-  className?: string;
-  petals?: number;
-};
-
-export function FlowerBurst({ className, petals = 6 }: FlowerBurstProps) {
-  const angleStep = 360 / petals;
-  return (
-    <svg viewBox="0 0 100 100" className={cn("h-full w-full", className)} aria-hidden>
-      <g fill="currentColor">
-        {Array.from({ length: petals }).map((_, i) => (
-          <rect
-            key={i}
-            x="42.5"
-            y="2"
-            width="15"
-            height="48"
-            rx="7.5"
-            transform={`rotate(${i * angleStep} 50 50)`}
-          />
-        ))}
-        <circle cx="50" cy="50" r="9" />
-      </g>
     </svg>
   );
 }

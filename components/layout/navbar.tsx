@@ -32,7 +32,7 @@ export function Navbar() {
           className="relative z-10 flex items-center gap-2"
           onClick={() => setOpen(false)}
         >
-          <Logo className="text-2xl transition-colors duration-500" light={!solid} />
+          <Logo className="h-9" light={!solid} />
         </Link>
 
         <div className="hidden items-center gap-10 md:flex">

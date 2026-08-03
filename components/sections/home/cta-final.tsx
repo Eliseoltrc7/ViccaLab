@@ -1,6 +1,6 @@
 import { MessageCircle } from "lucide-react";
 import { Reveal } from "@/components/shared/reveal";
-import { AsteriskShape, FlowerBurst } from "@/components/shared/decorative-shapes";
+import { AsteriskShape, StarImage } from "@/components/shared/decorative-shapes";
 import { CONTACT } from "@/lib/constants";
 
 export function CtaFinal() {
@@ -10,8 +10,17 @@ export function CtaFinal() {
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute -left-16 -top-16 h-64 w-64 rounded-full bg-brand-primary/40 blur-3xl" />
           <div className="absolute -bottom-20 -right-10 h-72 w-72 rounded-full bg-brand-lime/15 blur-3xl" />
-          <FlowerBurst className="absolute -right-10 -top-16 h-56 w-56 text-brand-primary/50 md:h-64 md:w-64" />
-          <FlowerBurst className="absolute -bottom-16 -left-10 h-48 w-48 text-brand-lime/10 md:h-56 md:w-56" />
+          <StarImage
+            variant="lavender"
+            rotate={16}
+            className="absolute -right-8 -top-14 w-44 opacity-80 md:w-56"
+          />
+          <StarImage
+            variant="lime"
+            flip
+            rotate={-14}
+            className="absolute -bottom-14 -left-8 w-40 opacity-90 md:w-48"
+          />
           <AsteriskShape className="absolute left-[10%] top-[20%] h-7 w-7 text-brand-lime/60" />
           <AsteriskShape className="absolute right-[12%] bottom-[22%] h-9 w-9 text-white/20" />
         </div>

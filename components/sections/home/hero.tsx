@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Heart, TrendingUp } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { AsteriskShape, FlowerBurst } from "@/components/shared/decorative-shapes";
+import { AsteriskShape, StarImage } from "@/components/shared/decorative-shapes";
 import { StickerBadge } from "@/components/shared/sticker-badge";
 import { InstagramIcon } from "@/components/shared/social-icons";
 
@@ -46,8 +46,17 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-24 -top-24 h-96 w-96 rounded-full bg-brand-lavender/25 blur-3xl" />
         <div className="absolute -bottom-32 right-0 h-[28rem] w-[28rem] rounded-full bg-brand-lime/15 blur-3xl" />
-        <FlowerBurst className="absolute -right-16 -top-24 h-72 w-72 text-white/10 md:h-96 md:w-96" />
-        <FlowerBurst className="absolute -bottom-20 -left-16 h-56 w-56 text-brand-lime/20 md:h-72 md:w-72" />
+        <StarImage
+          variant="lavender"
+          rotate={12}
+          className="absolute -right-14 -top-20 w-64 opacity-90 md:w-80"
+        />
+        <StarImage
+          variant="lime"
+          flip
+          rotate={-8}
+          className="absolute -bottom-16 -left-14 w-48 opacity-90 md:w-60"
+        />
         <AsteriskShape className="absolute right-[8%] top-[18%] h-8 w-8 text-brand-lime/70" />
         <AsteriskShape className="absolute left-[6%] top-[65%] h-6 w-6 text-white/30" />
       </div>
