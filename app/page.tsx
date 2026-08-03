@@ -7,7 +7,6 @@ import { WhyUs } from "@/components/sections/home/why-us";
 import { Stats } from "@/components/sections/home/stats";
 import { CaseStudies } from "@/components/sections/home/case-studies";
 import { Process } from "@/components/sections/home/process";
-import { Testimonials } from "@/components/sections/home/testimonials";
 import { CtaFinal } from "@/components/sections/home/cta-final";
 
 export const metadata: Metadata = {
@@ -28,7 +27,6 @@ export default function Home() {
       <Stats />
       <CaseStudies />
       <Process />
-      <Testimonials />
       <CtaFinal />
     </>
   );

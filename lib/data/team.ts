@@ -11,7 +11,7 @@ export const team: TeamMember[] = [
   {
     id: "ximena-castellano",
     name: "Ximena Castellano",
-    role: "Co-fundadora",
+    role: "Partner & Creadora de Contenido",
     bio: "Especialista en creación de contenido, fotografía y producción audiovisual. Ximena le da a cada marca una voz visual propia, cuidando cada detalle creativo desde la idea hasta la edición final.",
     specialties: [
       "Creación de contenido",
