@@ -21,7 +21,7 @@ export function Stats() {
           {stats.map((stat) => (
             <RevealItem key={stat.label}>
               <div className="text-center">
-                <p className="font-display text-4xl font-medium text-brand-lime md:text-5xl">
+                <p className="font-display text-4xl font-bold text-brand-lime md:text-5xl">
                   <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                 </p>
                 <p className="mt-2 text-sm leading-snug text-white/70">

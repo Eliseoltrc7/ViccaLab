@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Reveal } from "@/components/shared/reveal";
+import { FlowerBurst } from "@/components/shared/decorative-shapes";
 import { historyMilestones } from "@/lib/data/history-milestones";
 
 if (typeof window !== "undefined") {
@@ -40,9 +41,11 @@ export function HistoryTimeline() {
   return (
     <section
       ref={sectionRef}
-      className="bg-brand-charcoal py-24 text-brand-cream md:py-32"
+      className="relative overflow-hidden bg-brand-charcoal py-24 text-brand-cream md:py-32"
     >
-      <div className="container-page">
+      <FlowerBurst className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 text-brand-lime/10 md:h-80 md:w-80" />
+      <FlowerBurst className="pointer-events-none absolute -bottom-20 -left-16 h-56 w-56 text-brand-lavender/10 md:h-72 md:w-72" />
+      <div className="container-page relative">
         <SectionHeading
           eyebrow="Nuestra historia"
           title="De una idea compartida a un estudio creativo consolidado."
@@ -73,7 +76,7 @@ export function HistoryTimeline() {
                     <span className="font-display text-sm uppercase tracking-[0.2em] text-brand-lime">
                       {milestone.year}
                     </span>
-                    <h3 className="font-display text-xl font-medium text-white md:text-2xl">
+                    <h3 className="font-display text-xl font-bold text-white md:text-2xl">
                       {milestone.title}
                     </h3>
                     <p className="text-sm leading-relaxed text-white/55">

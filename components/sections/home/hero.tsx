@@ -6,7 +6,8 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Heart, TrendingUp } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { AsteriskShape } from "@/components/shared/decorative-shapes";
+import { AsteriskShape, FlowerBurst } from "@/components/shared/decorative-shapes";
+import { StickerBadge } from "@/components/shared/sticker-badge";
 import { InstagramIcon } from "@/components/shared/social-icons";
 
 if (typeof window !== "undefined") {
@@ -45,26 +46,28 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-24 -top-24 h-96 w-96 rounded-full bg-brand-lavender/25 blur-3xl" />
         <div className="absolute -bottom-32 right-0 h-[28rem] w-[28rem] rounded-full bg-brand-lime/15 blur-3xl" />
+        <FlowerBurst className="absolute -right-16 -top-24 h-72 w-72 text-white/10 md:h-96 md:w-96" />
+        <FlowerBurst className="absolute -bottom-20 -left-16 h-56 w-56 text-brand-lime/20 md:h-72 md:w-72" />
         <AsteriskShape className="absolute right-[8%] top-[18%] h-8 w-8 text-brand-lime/70" />
         <AsteriskShape className="absolute left-[6%] top-[65%] h-6 w-6 text-white/30" />
       </div>
 
       <div className="container-page relative grid items-center gap-16 lg:grid-cols-[1.1fr_1fr]">
         <div>
-          <motion.span
+          <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-white/90 backdrop-blur-sm"
+            className="mb-6"
           >
-            Estudio creativo de marketing digital
-          </motion.span>
+            <StickerBadge tone="glass">Estudio creativo de marketing digital</StickerBadge>
+          </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display text-4xl font-medium leading-[1.05] text-balance text-white sm:text-5xl md:text-6xl lg:text-[3.75rem]"
+            className="font-display text-4xl font-bold leading-[1.05] text-balance text-white sm:text-5xl md:text-6xl lg:text-[3.75rem]"
           >
             Transformamos marcas en experiencias digitales que venden.
           </motion.h1>

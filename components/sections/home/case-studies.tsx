@@ -80,7 +80,7 @@ export function CaseStudies() {
                     </a>
                   )}
                 </div>
-                <h3 className="mt-3 font-display text-2xl font-medium text-brand-charcoal">
+                <h3 className="mt-3 font-display text-2xl font-bold text-brand-charcoal">
                   {study.client}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-brand-charcoal/60">

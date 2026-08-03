@@ -18,6 +18,33 @@ export function AsteriskShape({ className }: { className?: string }) {
   );
 }
 
+type FlowerBurstProps = {
+  className?: string;
+  petals?: number;
+};
+
+export function FlowerBurst({ className, petals = 6 }: FlowerBurstProps) {
+  const angleStep = 360 / petals;
+  return (
+    <svg viewBox="0 0 100 100" className={cn("h-full w-full", className)} aria-hidden>
+      <g fill="currentColor">
+        {Array.from({ length: petals }).map((_, i) => (
+          <rect
+            key={i}
+            x="42.5"
+            y="2"
+            width="15"
+            height="48"
+            rx="7.5"
+            transform={`rotate(${i * angleStep} 50 50)`}
+          />
+        ))}
+        <circle cx="50" cy="50" r="9" />
+      </g>
+    </svg>
+  );
+}
+
 export function BlobShape({ className }: { className?: string }) {
   return (
     <svg

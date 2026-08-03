@@ -25,7 +25,7 @@ export function ServiceCard({
             <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-primary/10 text-brand-primary">
               <service.icon className="h-6 w-6" />
             </div>
-            <h2 className="mt-6 font-display text-2xl font-medium text-brand-charcoal md:text-3xl">
+            <h2 className="mt-6 font-display text-2xl font-bold text-brand-charcoal md:text-3xl">
               {service.title}
             </h2>
             <p className="mt-4 text-base leading-relaxed text-brand-charcoal/65">

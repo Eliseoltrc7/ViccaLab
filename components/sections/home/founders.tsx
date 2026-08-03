@@ -30,7 +30,7 @@ export function Founders() {
                 <p className="text-xs font-medium uppercase tracking-[0.16em] text-brand-primary">
                   {member.role}
                 </p>
-                <h3 className="mt-2 font-display text-2xl font-medium text-brand-charcoal">
+                <h3 className="mt-2 font-display text-2xl font-bold text-brand-charcoal">
                   {member.name}
                 </h3>
                 <p className="mt-4 text-sm leading-relaxed text-brand-charcoal/65">

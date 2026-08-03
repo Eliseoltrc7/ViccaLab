@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
@@ -9,6 +8,7 @@ import { Menu, X, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useScrolled } from "@/hooks/use-scroll-direction";
 import { NAV_LINKS } from "@/lib/constants";
+import { Logo } from "@/components/shared/logo";
 
 export function Navbar() {
   const scrolled = useScrolled(60);
@@ -32,17 +32,7 @@ export function Navbar() {
           className="relative z-10 flex items-center gap-2"
           onClick={() => setOpen(false)}
         >
-          <Image
-            src="/brand/viccalab-logo.png"
-            alt="ViccaLab"
-            width={180}
-            height={52}
-            priority
-            className={cn(
-              "h-11 w-auto transition-all duration-500",
-              !solid && "brightness-0 invert"
-            )}
-          />
+          <Logo className="text-2xl transition-colors duration-500" light={!solid} />
         </Link>
 
         <div className="hidden items-center gap-10 md:flex">

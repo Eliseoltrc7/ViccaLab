@@ -1,11 +1,11 @@
 import Link from "next/link";
-import Image from "next/image";
 import {
   InstagramIcon,
   FacebookIcon,
   LinkedinIcon,
   TiktokIcon,
 } from "@/components/shared/social-icons";
+import { Logo } from "@/components/shared/logo";
 import { CONTACT, NAV_LINKS, SITE_DESCRIPTION } from "@/lib/constants";
 import { services } from "@/lib/data/services";
 
@@ -16,13 +16,7 @@ export function Footer() {
     <footer className="border-t border-brand-charcoal/10 bg-brand-charcoal text-brand-cream">
       <div className="container-page grid gap-12 py-16 md:grid-cols-4 md:gap-8 md:py-24">
         <div className="md:col-span-2">
-          <Image
-            src="/brand/viccalab-logo.png"
-            alt="ViccaLab"
-            width={200}
-            height={55}
-            className="h-12 w-auto brightness-0 invert"
-          />
+          <Logo className="text-3xl" light />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-brand-cream/60">
             {SITE_DESCRIPTION}
           </p>

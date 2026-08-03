@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Space_Grotesk } from "next/font/google";
+import { Inter, Baloo_2 } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
@@ -14,15 +14,10 @@ const inter = Inter({
   display: "swap",
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const baloo = Baloo_2({
+  variable: "--font-baloo",
   subsets: ["latin"],
-  display: "swap",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
-  subsets: ["latin"],
+  weight: ["500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -59,7 +54,12 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
 };
 
@@ -82,7 +82,7 @@ export default function RootLayout({
     <html
       lang="es"
       data-scroll-behavior="smooth"
-      className={`${inter.variable} ${playfair.variable} ${spaceGrotesk.variable} h-full antialiased`}
+      className={`${inter.variable} ${baloo.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-brand-cream">
         <script

@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/shared/reveal";
+import { StickerBadge } from "@/components/shared/sticker-badge";
 
 type SectionHeadingProps = {
   eyebrow?: string;
@@ -26,13 +27,11 @@ export function SectionHeading({
     >
       {eyebrow && (
         <Reveal>
-          <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-charcoal/10 bg-white px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-brand-primary">
-            {eyebrow}
-          </span>
+          <StickerBadge className="mb-5">{eyebrow}</StickerBadge>
         </Reveal>
       )}
       <Reveal delay={0.05}>
-        <h2 className="font-display text-3xl leading-[1.1] font-medium text-balance text-brand-charcoal sm:text-4xl md:text-5xl">
+        <h2 className="font-display text-3xl leading-[1.1] font-bold text-balance text-brand-charcoal sm:text-4xl md:text-5xl">
           {title}
         </h2>
       </Reveal>

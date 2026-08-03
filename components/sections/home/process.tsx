@@ -26,7 +26,7 @@ export function Process() {
                 <div className="mt-3 flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-brand-primary transition-colors duration-300 group-hover:bg-brand-lime group-hover:text-brand-charcoal">
                   <step.icon className="h-5 w-5" />
                 </div>
-                <h3 className="mt-5 font-display text-lg font-medium text-brand-charcoal transition-colors duration-300 group-hover:text-white">
+                <h3 className="mt-5 font-display text-lg font-bold text-brand-charcoal transition-colors duration-300 group-hover:text-white">
                   {step.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-brand-charcoal/60 transition-colors duration-300 group-hover:text-white/75">

@@ -8,8 +8,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
-  --font-display: var(--font-space-grotesk);
-  --font-serif: var(--font-playfair);
+  --font-display: var(--font-baloo);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-display);
 
@@ -163,5 +162,8 @@
   }
   .cursor-none-desktop {
     cursor: none;
+  }
+  .shadow-sticker {
+    box-shadow: 0 10px 24px -8px rgba(45, 46, 40, 0.25);
   }
 }

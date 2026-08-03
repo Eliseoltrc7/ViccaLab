@@ -20,7 +20,7 @@ export function ContactInfo() {
     <div className="space-y-6">
       <Reveal>
         <div className="rounded-3xl border border-brand-charcoal/8 bg-white p-8">
-          <h3 className="font-display text-lg font-medium text-brand-charcoal">
+          <h3 className="font-display text-lg font-bold text-brand-charcoal">
             Datos de contacto
           </h3>
           <div className="mt-5 space-y-4">
@@ -56,7 +56,7 @@ export function ContactInfo() {
 
       <Reveal delay={0.05}>
         <div className="rounded-3xl border border-brand-charcoal/8 bg-white p-8">
-          <h3 className="font-display text-lg font-medium text-brand-charcoal">
+          <h3 className="font-display text-lg font-bold text-brand-charcoal">
             Seguinos
           </h3>
           <div className="mt-5 flex gap-3">

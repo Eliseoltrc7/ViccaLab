@@ -79,7 +79,7 @@ export function About() {
                 <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-primary/10 text-brand-primary">
                   <pillar.icon className="h-5 w-5" />
                 </div>
-                <h3 className="mt-5 font-display text-lg font-medium text-brand-charcoal">
+                <h3 className="mt-5 font-display text-lg font-bold text-brand-charcoal">
                   {pillar.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-brand-charcoal/60">
