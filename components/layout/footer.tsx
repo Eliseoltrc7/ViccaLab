@@ -1,10 +1,5 @@
 import Link from "next/link";
-import {
-  InstagramIcon,
-  FacebookIcon,
-  LinkedinIcon,
-  TiktokIcon,
-} from "@/components/shared/social-icons";
+import { InstagramIcon, TiktokIcon } from "@/components/shared/social-icons";
 import { Logo } from "@/components/shared/logo";
 import { CONTACT, NAV_LINKS, SITE_DESCRIPTION } from "@/lib/constants";
 import { services } from "@/lib/data/services";
@@ -23,8 +18,6 @@ export function Footer() {
           <div className="mt-6 flex items-center gap-3">
             {[
               { icon: InstagramIcon, href: CONTACT.social.instagram.url, label: "Instagram" },
-              { icon: FacebookIcon, href: CONTACT.social.facebook.url, label: "Facebook" },
-              { icon: LinkedinIcon, href: CONTACT.social.linkedin.url, label: "LinkedIn" },
               { icon: TiktokIcon, href: CONTACT.social.tiktok.url, label: "TikTok" },
             ].map(({ icon: Icon, href, label }) => (
               <a

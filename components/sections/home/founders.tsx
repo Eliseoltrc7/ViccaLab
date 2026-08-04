@@ -15,8 +15,8 @@ export function Founders() {
 
       <div className="mt-16 grid gap-8 md:grid-cols-2">
         {team.map((member, index) => (
-          <Reveal key={member.id} delay={index * 0.1}>
-            <div className="group overflow-hidden rounded-3xl border border-brand-charcoal/8 bg-white transition-shadow duration-300 hover:shadow-[0_30px_60px_-25px_rgba(45,46,40,0.2)]">
+          <Reveal key={member.id} delay={index * 0.1} className="h-full">
+            <div className="group flex h-full flex-col overflow-hidden rounded-3xl border border-brand-charcoal/8 bg-white transition-shadow duration-300 hover:shadow-[0_30px_60px_-25px_rgba(45,46,40,0.2)]">
               <div className="relative aspect-[3/4] overflow-hidden">
                 <Image
                   src={member.image}
@@ -26,7 +26,7 @@ export function Founders() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
               </div>
-              <div className="p-8">
+              <div className="flex flex-1 flex-col p-8">
                 <p className="text-xs font-medium uppercase tracking-[0.16em] text-brand-primary">
                   {member.role}
                 </p>
@@ -36,7 +36,7 @@ export function Founders() {
                 <p className="mt-4 text-sm leading-relaxed text-brand-charcoal/65">
                   {member.bio}
                 </p>
-                <div className="mt-6 flex flex-wrap gap-2">
+                <div className="mt-auto flex flex-wrap gap-2 pt-6">
                   {member.specialties.map((specialty) => (
                     <span
                       key={specialty}

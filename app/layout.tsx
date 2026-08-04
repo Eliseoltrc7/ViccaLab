@@ -70,7 +70,7 @@ const organizationJsonLd = {
   url: SITE_URL,
   logo: `${SITE_URL}/brand/viccalab-logo.png`,
   description: SITE_DESCRIPTION,
-  sameAs: ["https://instagram.com/vicca.lab"],
+  sameAs: ["https://instagram.com/vicca.lab", "https://www.tiktok.com/@viccalab"],
 };
 
 export default function RootLayout({

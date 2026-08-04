@@ -55,12 +55,28 @@ export function ContactForm() {
   }, [preselectedService, reset]);
 
   const onSubmit = async (values: ContactFormValues) => {
-    // TODO: conectar con API de email/CRM real (ej. Resend) para enviar el formulario.
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log("Nuevo contacto ViccaLab:", values);
-    toast.success("¡Mensaje enviado! Te vamos a responder a la brevedad.");
-    setSubmitted(true);
-    reset();
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => null);
+        throw new Error(data?.error ?? "No se pudo enviar el mensaje.");
+      }
+
+      toast.success("¡Mensaje enviado! Te vamos a responder a la brevedad.");
+      setSubmitted(true);
+      reset();
+    } catch (error) {
+      toast.error(
+        error instanceof Error
+          ? error.message
+          : "No se pudo enviar el mensaje. Probá de nuevo en unos minutos."
+      );
+    }
   };
 
   return (

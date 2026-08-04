@@ -14,7 +14,7 @@ export const CONTACT = {
     `https://wa.me/${WHATSAPP_NUMBER}${
       message ? `?text=${encodeURIComponent(message)}` : ""
     }`,
-  email: "castellanoximena42@gmail.com",
+  email: "Vicoemailwork@gmail.com",
   // TODO: confirmar ciudad/ubicación exacta para el mapa y el footer.
   location: "Tucumán, Argentina",
   social: {
@@ -22,12 +22,7 @@ export const CONTACT = {
       handle: "@vicca.lab",
       url: "https://instagram.com/vicca.lab",
     },
-    // TODO: agregar el link real de Facebook.
-    facebook: { handle: "ViccaLab", url: "https://facebook.com" },
-    // TODO: agregar el link real de LinkedIn.
-    linkedin: { handle: "ViccaLab", url: "https://linkedin.com" },
-    // TODO: agregar el link real de TikTok.
-    tiktok: { handle: "@vicca.lab", url: "https://tiktok.com" },
+    tiktok: { handle: "@viccalab", url: "https://www.tiktok.com/@viccalab" },
   },
 } as const;
 

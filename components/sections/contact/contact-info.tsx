@@ -1,17 +1,10 @@
 import { Mail, MapPin, MessageCircle } from "lucide-react";
-import {
-  InstagramIcon,
-  FacebookIcon,
-  LinkedinIcon,
-  TiktokIcon,
-} from "@/components/shared/social-icons";
+import { InstagramIcon, TiktokIcon } from "@/components/shared/social-icons";
 import { Reveal } from "@/components/shared/reveal";
 import { CONTACT } from "@/lib/constants";
 
 const socialLinks = [
   { id: "instagram", icon: InstagramIcon, label: CONTACT.social.instagram.handle, href: CONTACT.social.instagram.url },
-  { id: "facebook", icon: FacebookIcon, label: CONTACT.social.facebook.handle, href: CONTACT.social.facebook.url },
-  { id: "linkedin", icon: LinkedinIcon, label: CONTACT.social.linkedin.handle, href: CONTACT.social.linkedin.url },
   { id: "tiktok", icon: TiktokIcon, label: CONTACT.social.tiktok.handle, href: CONTACT.social.tiktok.url },
 ];
 
