@@ -14,7 +14,7 @@ export const CONTACT = {
     `https://wa.me/${WHATSAPP_NUMBER}${
       message ? `?text=${encodeURIComponent(message)}` : ""
     }`,
-  email: "Vicoemailwork@gmail.com",
+  email: "viccalab.work@gmail.com",
   // TODO: confirmar ciudad/ubicación exacta para el mapa y el footer.
   location: "Tucumán, Argentina",
   social: {

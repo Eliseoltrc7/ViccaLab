@@ -42,7 +42,7 @@ Para editar el contenido del sitio (textos, servicios, casos de éxito, datos de
 
 El formulario de `/contacto` envía los mensajes por email usando [Resend](https://resend.com).
 
-1. Crear una cuenta gratis en [resend.com](https://resend.com) usando el email `Vicoemailwork@gmail.com` (así queda verificado automáticamente como destinatario, sin necesitar un dominio propio).
+1. Crear una cuenta gratis en [resend.com](https://resend.com) usando el email `viccalab.work@gmail.com` (así queda verificado automáticamente como destinatario, sin necesitar un dominio propio).
 2. Generar una API Key en el dashboard de Resend.
 3. Copiar `.env.local.example` a `.env.local` y completar `RESEND_API_KEY` con esa clave.
 4. En producción (Vercel), agregar la misma variable de entorno `RESEND_API_KEY` en la configuración del proyecto.
