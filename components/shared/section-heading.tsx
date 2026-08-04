@@ -7,6 +7,7 @@ type SectionHeadingProps = {
   title: string;
   description?: string;
   align?: "left" | "center";
+  tone?: "dark" | "light";
   className?: string;
 };
 
@@ -15,6 +16,7 @@ export function SectionHeading({
   title,
   description,
   align = "left",
+  tone = "dark",
   className,
 }: SectionHeadingProps) {
   return (
@@ -31,13 +33,23 @@ export function SectionHeading({
         </Reveal>
       )}
       <Reveal delay={0.05}>
-        <h2 className="font-display text-3xl leading-[1.1] font-bold text-balance text-brand-charcoal sm:text-4xl md:text-5xl">
+        <h2
+          className={cn(
+            "font-display text-3xl leading-[1.1] font-bold text-balance sm:text-4xl md:text-5xl",
+            tone === "light" ? "text-white" : "text-brand-charcoal"
+          )}
+        >
           {title}
         </h2>
       </Reveal>
       {description && (
         <Reveal delay={0.1}>
-          <p className="mt-5 text-base leading-relaxed text-brand-charcoal/65 md:text-lg">
+          <p
+            className={cn(
+              "mt-5 text-base leading-relaxed md:text-lg",
+              tone === "light" ? "text-white/65" : "text-brand-charcoal/65"
+            )}
+          >
             {description}
           </p>
         </Reveal>

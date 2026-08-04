@@ -1,6 +1,6 @@
 import { MessageCircle } from "lucide-react";
 import { Reveal } from "@/components/shared/reveal";
-import { AsteriskShape, StarImage } from "@/components/shared/decorative-shapes";
+import { AsteriskShape, FlowerImage } from "@/components/shared/decorative-shapes";
 import { CONTACT } from "@/lib/constants";
 
 export function CtaFinal() {
@@ -10,12 +10,12 @@ export function CtaFinal() {
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute -left-16 -top-16 h-64 w-64 rounded-full bg-brand-primary/40 blur-3xl" />
           <div className="absolute -bottom-20 -right-10 h-72 w-72 rounded-full bg-brand-lime/15 blur-3xl" />
-          <StarImage
-            variant="lavender"
+          <FlowerImage
+            variant="purple"
             rotate={16}
             className="absolute -right-8 -top-14 w-44 opacity-80 md:w-56"
           />
-          <StarImage
+          <FlowerImage
             variant="lime"
             flip
             rotate={-14}

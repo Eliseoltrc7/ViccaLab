@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Reveal } from "@/components/shared/reveal";
-import { StarImage } from "@/components/shared/decorative-shapes";
+import { FlowerImage } from "@/components/shared/decorative-shapes";
 import { historyMilestones } from "@/lib/data/history-milestones";
 
 if (typeof window !== "undefined") {
@@ -43,13 +43,13 @@ export function HistoryTimeline() {
       ref={sectionRef}
       className="relative overflow-hidden bg-brand-charcoal py-24 text-brand-cream md:py-32"
     >
-      <StarImage
+      <FlowerImage
         variant="lime"
         rotate={10}
         className="pointer-events-none absolute -right-12 -top-14 w-52 opacity-80 md:w-64"
       />
-      <StarImage
-        variant="lavender"
+      <FlowerImage
+        variant="cream"
         flip
         rotate={-12}
         className="pointer-events-none absolute -bottom-16 -left-12 w-48 opacity-70 md:w-56"
@@ -59,7 +59,8 @@ export function HistoryTimeline() {
           eyebrow="Nuestra historia"
           title="De una idea compartida a un estudio creativo consolidado."
           align="center"
-          className="mx-auto text-white [&_p]:text-white/60"
+          tone="light"
+          className="mx-auto"
         />
 
         <div className="relative mx-auto mt-20 max-w-3xl">

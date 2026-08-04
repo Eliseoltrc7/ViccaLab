@@ -11,7 +11,8 @@ export function Stats() {
           eyebrow="Números"
           title="Resultados que hablan por sí solos."
           align="center"
-          className="mx-auto [&_h2]:text-white"
+          tone="light"
+          className="mx-auto"
         />
 
         <RevealGroup

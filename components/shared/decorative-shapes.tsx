@@ -1,25 +1,26 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-const starVariants = {
-  lavender: { src: "/brand/shapes/star-lavender.png", width: 708, height: 666 },
-  lime: { src: "/brand/shapes/star-lime.png", width: 717, height: 846 },
+const flowerVariants = {
+  cream: { src: "/brand/shapes/flower-1.png", width: 3031, height: 2855 },
+  purple: { src: "/brand/shapes/flower-2.png", width: 3021, height: 2845 },
+  lime: { src: "/brand/shapes/flower-3.png", width: 3061, height: 2884 },
 } as const;
 
-type StarImageProps = {
+type FlowerImageProps = {
   className?: string;
-  variant?: keyof typeof starVariants;
+  variant?: keyof typeof flowerVariants;
   flip?: boolean;
   rotate?: number;
 };
 
-export function StarImage({
+export function FlowerImage({
   className,
-  variant = "lavender",
+  variant = "cream",
   flip = false,
   rotate = 0,
-}: StarImageProps) {
-  const { src, width, height } = starVariants[variant];
+}: FlowerImageProps) {
+  const { src, width, height } = flowerVariants[variant];
   return (
     <Image
       src={src}

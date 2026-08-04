@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Heart, TrendingUp } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { AsteriskShape, StarImage } from "@/components/shared/decorative-shapes";
+import { AsteriskShape, FlowerImage } from "@/components/shared/decorative-shapes";
 import { StickerBadge } from "@/components/shared/sticker-badge";
 import { InstagramIcon } from "@/components/shared/social-icons";
 
@@ -46,12 +46,12 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-24 -top-24 h-96 w-96 rounded-full bg-brand-lavender/25 blur-3xl" />
         <div className="absolute -bottom-32 right-0 h-[28rem] w-[28rem] rounded-full bg-brand-lime/15 blur-3xl" />
-        <StarImage
-          variant="lavender"
+        <FlowerImage
+          variant="cream"
           rotate={12}
           className="absolute -right-14 -top-20 w-64 opacity-90 md:w-80"
         />
-        <StarImage
+        <FlowerImage
           variant="lime"
           flip
           rotate={-8}
