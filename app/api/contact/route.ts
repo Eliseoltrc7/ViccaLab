@@ -1,6 +1,11 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import { contactFormSchema, SERVICE_OPTIONS } from "@/lib/validations/contact-schema";
+import {
+  contactFormSchema,
+  SERVICE_OPTIONS,
+  GOAL_OPTIONS,
+  BUDGET_OPTIONS,
+} from "@/lib/validations/contact-schema";
 import { CONTACT } from "@/lib/constants";
 
 export async function POST(request: Request) {
@@ -23,9 +28,12 @@ export async function POST(request: Request) {
     );
   }
 
-  const { name, company, email, phone, service, message } = parsed.data;
+  const { name, company, email, phone, service, goal, budget, message } = parsed.data;
   const serviceLabel =
     SERVICE_OPTIONS.find((option) => option.value === service)?.label ?? service;
+  const goalLabel = GOAL_OPTIONS.find((option) => option.value === goal)?.label ?? goal;
+  const budgetLabel =
+    BUDGET_OPTIONS.find((option) => option.value === budget)?.label ?? budget;
 
   const resend = new Resend(apiKey);
 
@@ -40,6 +48,8 @@ export async function POST(request: Request) {
       `Email: ${email}`,
       `Teléfono: ${phone}`,
       `Servicio: ${serviceLabel}`,
+      `Objetivo: ${goalLabel}`,
+      `Presupuesto: ${budgetLabel}`,
       "",
       "Mensaje:",
       message,

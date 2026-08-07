@@ -22,6 +22,8 @@ import { Reveal } from "@/components/shared/reveal";
 import {
   contactFormSchema,
   SERVICE_OPTIONS,
+  GOAL_OPTIONS,
+  BUDGET_OPTIONS,
   type ContactFormValues,
 } from "@/lib/validations/contact-schema";
 
@@ -44,6 +46,8 @@ export function ContactForm() {
       email: "",
       phone: "",
       service: preselectedService,
+      goal: "",
+      budget: "",
       message: "",
     },
   });
@@ -147,6 +151,57 @@ export function ContactForm() {
           {errors.service && (
             <p className="text-xs text-destructive">{errors.service.message}</p>
           )}
+        </div>
+
+        <div className="grid gap-6 sm:grid-cols-2">
+          <div className="space-y-2">
+            <Label htmlFor="goal">Objetivo</Label>
+            <Controller
+              control={control}
+              name="goal"
+              render={({ field }) => (
+                <Select value={field.value} onValueChange={field.onChange}>
+                  <SelectTrigger id="goal" className="w-full">
+                    <SelectValue placeholder="¿Qué querés lograr?" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {GOAL_OPTIONS.map((option) => (
+                      <SelectItem key={option.value} value={option.value}>
+                        {option.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              )}
+            />
+            {errors.goal && (
+              <p className="text-xs text-destructive">{errors.goal.message}</p>
+            )}
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="budget">Presupuesto</Label>
+            <Controller
+              control={control}
+              name="budget"
+              render={({ field }) => (
+                <Select value={field.value} onValueChange={field.onChange}>
+                  <SelectTrigger id="budget" className="w-full">
+                    <SelectValue placeholder="Rango estimado" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {BUDGET_OPTIONS.map((option) => (
+                      <SelectItem key={option.value} value={option.value}>
+                        {option.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              )}
+            />
+            {errors.budget && (
+              <p className="text-xs text-destructive">{errors.budget.message}</p>
+            )}
+          </div>
         </div>
 
         <div className="space-y-2">

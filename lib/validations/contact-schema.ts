@@ -10,6 +10,24 @@ export const SERVICE_OPTIONS = [
   { value: "otro", label: "Otro / No estoy seguro" },
 ] as const;
 
+export const GOAL_OPTIONS = [
+  { value: "aumentar-ventas", label: "Aumentar ventas" },
+  { value: "dar-a-conocer-marca", label: "Dar a conocer la marca" },
+  { value: "conseguir-clientes", label: "Conseguir más clientes / leads" },
+  { value: "presencia-redes", label: "Mejorar presencia en redes sociales" },
+  { value: "lanzar-producto", label: "Lanzar un producto o servicio nuevo" },
+  { value: "otro", label: "Otro" },
+] as const;
+
+// TODO: ajustar los rangos si no reflejan los presupuestos reales de ViccaLab.
+export const BUDGET_OPTIONS = [
+  { value: "menos-150k", label: "Menos de $150.000" },
+  { value: "150k-400k", label: "$150.000 – $400.000" },
+  { value: "400k-800k", label: "$400.000 – $800.000" },
+  { value: "mas-800k", label: "Más de $800.000" },
+  { value: "prefiero-conversarlo", label: "Prefiero conversarlo" },
+] as const;
+
 export const contactFormSchema = z.object({
   name: z
     .string()
@@ -33,6 +51,8 @@ export const contactFormSchema = z.object({
     .min(6, "Ingresá un teléfono válido.")
     .max(20, "Ese teléfono es demasiado largo."),
   service: z.string().min(1, "Elegí un servicio."),
+  goal: z.string().min(1, "Elegí un objetivo."),
+  budget: z.string().min(1, "Elegí un rango de presupuesto."),
   message: z
     .string()
     .trim()
